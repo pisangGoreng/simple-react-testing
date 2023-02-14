@@ -1,0 +1,39 @@
+
+- Untuk select spesific element di playground, 
+  screen.logTestingPlaygroundURL()
+
+- select spesicfic element di unit test
+  di unit test
+    screen.getByTestId("users")
+  
+  di element 
+    <tbody data-testid="users">
+
+- list element -> aria name
+  <a href="/">Link</a>
+  <button>button</button>
+  <footer>contentinfo</footer>
+  <h1>heading</h1>
+  <header>banner</header>
+  <img alt="description" /> img
+  <input type="checkbox" /> checkbox
+  <input type="number" /> spinbutton
+  <input type="radio" /> radio
+  <input type="text" /> textbox
+  <ul>listgroup</ul>n
+  <li>listItem</li>
+
+- get accesible name element -> element yg di dalam nya ada text
+  - <button>Submit</button>
+  - const submitButton = screen.getByRole('button', {
+    name: /submit/i
+  })
+
+- get element with id & html for (biasanya untuk textinput)
+  - <label htmlFor="email">Email</label>
+    <input id="email"/>
+  - const emailInput = screen.getByRole('textbox', {name: /email/i})
+
+- get element with aria-label
+  - <button aria-label="sign in">
+  - const signInButton = screen.getByRole('button', {name: /sign in/i})
